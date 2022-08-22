@@ -10,6 +10,13 @@
 		<mvc:interceptor>
 			<mvc:mapping path="/listForm"/>
 			<mvc:mapping path="/list"/>
+			<mvc:mapping path="/writeForm"/>
+			<mvc:mapping path="/write"/>
+			<mvc:mapping path="/updateForm"/>
+			<mvc:mapping path="/write"/>
+			<mvc:mapping path="/detail"/>
+			<mvc:mapping path="/myProfile"/>
+			<mvc:mapping path="/reserch"/>
 			<bean class="kr.co.cafenrecipes.utils.LoginInterceptor"/>
 		</mvc:interceptor>
 	</mvc:interceptors>	

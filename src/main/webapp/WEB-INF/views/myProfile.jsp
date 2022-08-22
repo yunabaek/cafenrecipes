@@ -38,8 +38,7 @@
 			</tr>
 			<tr>
 				<th>ID</th>
-				<td><input type="text" name="id" value="${myProfile.id}"
-					readonly /></td>
+				<td>${myProfile.id}</td>
 			</tr>
 			<tr>
 				<th>PW</th>
@@ -47,8 +46,7 @@
 			</tr>
 			<tr>
 				<th>NAME</th>
-				<td><input type="text" name="name" value="${myProfile.name}"
-					readonly /></td>
+				<td>${myProfile.name}</td>
 			</tr>
 			<tr>
 				<th>BIRTH DAY</th>
@@ -56,7 +54,7 @@
 			</tr>
 			<tr>
 				<th>GENDER</th>
-				<td><input name="gender" value="${myProfile.gender}" readonly /></td>
+				<td>${myProfile.gender}</td>
 			</tr>
 			<tr>
 				<th>EMAIL</th>
