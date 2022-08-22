@@ -23,7 +23,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 			
 			pass = false;
 
-			response.sendRedirect("/gudee/");
+			response.sendRedirect("/cafenrecipes/loginForm");
 		}
 		
 		return pass;

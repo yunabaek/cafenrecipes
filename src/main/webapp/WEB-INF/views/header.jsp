@@ -36,26 +36,8 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
 	media="screen">
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
 </head>
 <body>
-	<!--header section start -->
-	<div class="header_section">
-		<div class="container-fluid">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<div class="">
-					<a href="main"><img src="resources/images/logo.png"></a>
-				</div>
-				<button class="navbar-toggler" type="button" data-toggle="collapse"
-					data-target="#navbarNav" aria-controls="navbarNav"
-					aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav ml-auto">
-					</ul>
-				</div>
-			</nav>
-		</div>
-	</div>
 </body>
 </html>
