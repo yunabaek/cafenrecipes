@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-<!-- paging -->
+<!-- 페이징 -->
 <link
 	href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -35,7 +35,6 @@
 			</nav>
 		</div>
 	</div>
-	<div>${loginBox}</div>
 	<jsp:include page="loginBox.jsp" />
 	<div class="main table">
 		<input type="button" onclick="location.href='./writeForm'"
@@ -51,17 +50,28 @@
 			</fieldset>
 		</form>
 		<table>
-			<thead>
+			<tr>
+				<th>글번호</th>
+				<th>제목</th>
+				<th>작성자</th>
+				<th>조회수</th>
+			</tr>
+			<!-- 
+			<c:if test="${list eq null || size == 0}">
 				<tr>
-					<th>Share My Recipe</th>
+					<td colspan="5">등록된 글이 없습니다.</td>
 				</tr>
+			</c:if>
+			<c:forEach items="${list}" var="bbs">
 				<tr>
-					<th>글번호</th>
-					<th>제목</th>
-					<th>작성자</th>
-					<th>조회수</th>
+					<td>${bbs.idx}</td>
+					<td><a href="detail?idx=${bbs.idx}">${bbs.subject}</a></td>
+					<td>${bbs.name}</td>
+					<td>${bbs.bHit}</td>
 				</tr>
-			</thead>
+			</c:forEach>
+			 -->
+			<!-- 페이징  -->
 			<tbody id="list"></tbody>
 			<tr>
 				<td colspan="3" id="paging ">
@@ -132,7 +142,8 @@
 			console.log(idx, item);
 			content += '<tr>';
 			content += '<td>' + item.idx + '</td>';
-			content += '<td>' + item.subject + '</td>';
+			content += '<td><a href="detail?idx=' + item.idx + '">'
+					+ item.subject + '</a></td>';
 			content += '<td>' + item.name + '</td>';
 			content += '<td>' + item.bHit + '</td>';
 			content += '</tr>';

@@ -67,8 +67,8 @@
 			dataType : 'JSON',
 			success : function(data) {
 				if (data.success != '일치하는 정보가 없습니다.') {
-					alert('고객님의 아이디는 ' + data.success + '입니다.');
-					location.href = './loginForm';
+					alert('고객님의 비밀번호는 ' + data.success + '입니다.');
+					location.href = 'loginForm';
 				} else {
 					alert('입력하신 정보가 일치 하지 않습니다. 다시 확인 후 입력바랍니다.');
 				}

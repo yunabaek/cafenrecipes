@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC	"-//mybatis.org//DTD Mapper 3.0//EN"
-	"http://mybatis.org/dtd/mybatis-3-mapper.dtd"
+<!DOCTYPE mapper PUBLIC   "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd"
 >
+<!-- 이 xml이 어떤 interface와 연결되는지 설정 -->
 <mapper namespace="kr.co.cafenrecipes.dao.MemberDAO">
 
 	<select id="login" resultType="String">
 		SELECT id FROM member
-		WHERE id=#{param1} AND pw = #{param2}
+		WHERE
+		id=#{param1} AND pw = #{param2}
 	</select>
 
 	<insert id="join"
@@ -34,16 +36,18 @@
 		AND email = #{param3}
 	</select>
 
-	<!-- 회원정보 수정 불러오기-->
+	<!-- 회원정보 수정 불러오기 -->
 	<select id="myprofile"
 		resultType="kr.co.cafenrecipes.dto.MemberDTO">
 		select * from member where id = #{param1}
 	</select>
-	
-	<!-- 회원정보 수정 정보 업데이트-->
+
+	<!-- 회원정보 수정 정보 업데이트 -->
 	<update id="profileUpdate">
-	UPDATE member SET 
-	pw=#{pw},name = #{name}, email = #{email} 
-	WHERE id= #{id}
+		UPDATE member SET
+		pw =#{pw},birth = #{birth},email =
+		#{email}
+		WHERE id= #{id}
 	</update>
+
 </mapper>

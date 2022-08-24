@@ -46,15 +46,16 @@
 			</tr>
 			<tr>
 				<th>사진</th>
-				<td><input type="file" name="photos" multiple="multiple" /> <c:forEach
-						items="${photos}" var="photo">
+				<td><input type="hidden" name="photos" multiple="multiple" />
+					<br />
+				<c:forEach items="${photos}" var="photo">
 						<img src="/photo/${photo.newFileName}" width="500px" />
 						<br />
 						<br />
 					</c:forEach></td>
 			</tr>
 		</table>
-		<br /> <input type="button" onclick="location.href='./list'"
+		<br /> <input type="button" onclick="location.href='listForm'"
 			value="리스트" /> <input type="submit" value="저장" />
 	</form>
 	<jsp:include page="footer.jsp" />

@@ -24,12 +24,10 @@
 						<li class="nav-item active"><a class="nav-link"
 							href="loginForm">login</a></li>
 						<li class="nav-item"><a class="nav-link" href="joinForm">Sign
-								up</a> <!-- <a class="nav-link" href="about.jsp">Sign up</a> --></li>
+								up</a></li>
 						<li class="nav-item"><a class="nav-link" href="listForm">Share
 								my recipe</a></li>
-						<li class="nav-item">
-							<!-- <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a> 돋보기 -->
-						</li>
+						<li class="nav-item"></li>
 					</ul>
 				</div>
 			</nav>
@@ -169,58 +167,6 @@
 		</div>
 	</div>
 	<!-- gallery section end -->
-	<!-- testimonial section start -->
-	<div class="carousel-item">
-		<div class="client_section_2">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="testimonial_section_2">
-							<h4 class="client_name_text">
-								Monila <span class="quick_icon"><img
-									src="resources/images/quick-icon.png"></span>
-							</h4>
-							<p class="customer_text">many variations of passages of Lorem
-								Ipsum available, but the majority have suffered alteration in
-								some form, by injected humour, or randomised words which don't
-								look even slightly believable. If you are going to use a passage
-								of Lorem Ipsum, you need to be sure there isn't anything
-								embarrassing hidden in the middle of text. All themany
-								variations of passages of Lorem Ipsum available, but the
-								majority have suffered alteration in some embarrassing hidden in
-								the middle of text. All the</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="carousel-item">
-		<div class="client_section_2">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="testimonial_section_2">
-							<h4 class="client_name_text">
-								Monila <span class="quick_icon"><img
-									src="resources/images/quick-icon.png"></span>
-							</h4>
-							<p class="customer_text">many variations of passages of Lorem
-								Ipsum available, but the majority have suffered alteration in
-								some form, by injected humour, or randomised words which don't
-								look even slightly believable. If you are going to use a passage
-								of Lorem Ipsum, you need to be sure there isn't anything
-								embarrassing hidden in the middle of text. All themany
-								variations of passages of Lorem Ipsum available, but the
-								majority have suffered alteration in some embarrassing hidden in
-								the middle of text. All the</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- testimonial section end -->
 	<jsp:include page="footer.jsp" />
 </body>
 </html>

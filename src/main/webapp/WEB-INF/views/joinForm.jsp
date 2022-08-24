@@ -24,14 +24,11 @@
 						<li class="nav-item">
 						<li class="nav-item active"><a class="nav-link"
 							href="loginForm">login</a></li>
-						</li>
 					</ul>
 				</div>
 			</nav>
 		</div>
 	</div>
-	<div>${loginBox}</div>
-	<jsp:include page="loginBox.jsp" />
 	<div class="main table">
 		<form action="join" method="post">
 			<table>
@@ -71,7 +68,7 @@
 			</table>
 		</form>
 	</div>
-	<jsp:include page="footer.jsp" />	
+	<jsp:include page="footer.jsp" />
 </body>
 <script>
 	var msg = "${msg}";

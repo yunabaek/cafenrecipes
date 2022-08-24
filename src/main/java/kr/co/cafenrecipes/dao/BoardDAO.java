@@ -30,5 +30,5 @@ public interface BoardDAO {
 	ArrayList<PhotoDTO> photoList(String idx);
 
 	ArrayList<BoardDTO> search(HashMap<String, String> params);
-	
+
 }

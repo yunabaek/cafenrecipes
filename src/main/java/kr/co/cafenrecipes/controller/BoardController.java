@@ -46,11 +46,11 @@ public class BoardController {
 		return "listForm";
 	}
 
-	/* 리스트 */
+	/* 리스트 + 페이징 */
 	@ResponseBody
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public HashMap<String, Object> list(@RequestParam String page, @RequestParam String cnt) {
-		logger.info("리스트 요청:{} 페이지,{}개씩", page, cnt);
+	public HashMap<String, Object> list(Model model, @RequestParam String page, @RequestParam String cnt) {
+		logger.info("list 요청:{} 페이지,{}개씩", page, cnt);
 
 		int currPage = Integer.parseInt(page);
 		int pagePerCnt = Integer.parseInt(cnt);

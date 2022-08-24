@@ -42,11 +42,10 @@
 					<td><input type="password" name="pw" /></td>
 				</tr>
 				<tr>
-					<th colspan="2"><input type="submit" value="로그인" /> <!-- spring 에서는 .jsp 이동도 컨트롤러를 타야한다.(보안상 이유) -->
-						<input type="button" value="회원가입"
-						onclick="location.href='joinForm'" /> <input type="button"
-						onclick="location.href='./idfind'" value="ID찾기" /> <input
-						type="button" onclick="location.href='./pwfind'" value="PW찾기" /></th>
+					<th colspan="2"><input type="submit" value="로그인" /> <input
+						type="button" value="회원가입" onclick="location.href='joinForm'" />
+						<input type="button" onclick="location.href='idfind'" value="ID찾기" />
+						<input type="button" onclick="location.href='pwfind'" value="PW찾기" /></th>
 				</tr>
 			</table>
 		</form>

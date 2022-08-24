@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC	"-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd"
 >
-
 <mapper namespace="kr.co.cafenrecipes.dao.BoardDAO">
+
 	<select id="list" resultType="kr.co.cafenrecipes.dto.PagingDTO">
 		SELECT idx, subject, name, bHit
 		FROM bbs
@@ -17,7 +17,8 @@
 
 	<insert id="write" useGeneratedKeys="true" keyProperty="idx"
 		keyColumn="idx" parameterType="kr.co.cafenrecipes.dto.BoardDTO">
-		INSERT INTO bbs(subject,content,name)VALUES(#{subject},#{content},#{name})
+		INSERT INTO
+		bbs(subject,content,name)VALUES(#{subject},#{content},#{name})
 	</insert>
 
 	<insert id="fileWrite">
@@ -28,7 +29,8 @@
 	<select id="photoList"
 		resultType="kr.co.cafenrecipes.dto.PhotoDTO">
 		SELECT oriFileName, newFileName FROM photo
-		WHERE idx = #{param1} ORDER BY fileIdx DESC
+		WHERE idx =
+		#{param1} ORDER BY fileIdx DESC
 	</select>
 
 	<update id="upHit">
@@ -63,6 +65,6 @@
 				name LIKE CONCAT('%',#{keyword},'%')
 			</if>
 		</where>
-	</select>
-
+	</select>	
+	
 </mapper>

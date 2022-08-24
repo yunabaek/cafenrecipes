@@ -3,7 +3,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-
 </head>
 <body>
 	<jsp:include page="header.jsp" />
@@ -23,14 +22,11 @@
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
 						<li class="nav-item active"></li>
-						</li>
 					</ul>
 				</div>
 			</nav>
 		</div>
 	</div>
-	<div>${loginBox}</div>
-	<jsp:include page="loginBox.jsp" />
 	<div class="main table">
 		<table>
 			<tr>
@@ -38,7 +34,10 @@
 			</tr>
 			<tr>
 				<th>ID</th>
-				<td>${myProfile.id}</td>
+				<td>
+				${myProfile.id}
+				<input type="hidden" name="id" value="${myProfile.id}"/>
+				</td>			
 			</tr>
 			<tr>
 				<th>PW</th>
@@ -46,7 +45,10 @@
 			</tr>
 			<tr>
 				<th>NAME</th>
-				<td>${myProfile.name}</td>
+				<td>
+				${myProfile.name}
+				<input type="hidden" name="name" value="${myProfile.name}"/>
+				</td>			
 			</tr>
 			<tr>
 				<th>BIRTH DAY</th>
@@ -54,7 +56,10 @@
 			</tr>
 			<tr>
 				<th>GENDER</th>
-				<td>${myProfile.gender}</td>
+				<td>
+				${myProfile.gender}
+				<input type="hidden" name="gender" value="${myProfile.gender}"/>
+				</td>			
 			</tr>
 			<tr>
 				<th>EMAIL</th>
@@ -77,15 +82,14 @@
 		var $birth = $('input[name="birth"]');
 		var $gender = $('input[name="gender"]');
 		var $email = $('input[name="email"]');
-
 		if ($pw.val() == '') {
-			alert('비밀번호를 일력 해주세요');
+			alert('비밀번호를 입력 해주세요');
 			$pw.focus();
 		} else if ($birth.val() == '') {
-			alert('생년월일을 일력 해주세요');
+			alert('생년월일을 입력 해주세요');
 			$birth.focus();
 		} else if ($email.val() == '') {
-			alert('이메일을 일력 해주세요');
+			alert('이메일을 입력 해주세요');
 			$email.focus();
 		} else {
 			var userupdate = {};
@@ -96,7 +100,6 @@
 			userupdate.gender = $gender.val();
 			userupdate.email = $email.val();
 			console.log(userupdate);
-
 			$.ajax({
 				type : 'get',
 				url : 'profileupdate',
@@ -106,13 +109,13 @@
 					console.log(data);
 					if (data.success > 0) {
 						alert('정보 수정이 완료되었습니다.');
+						location.href='listForm';
 					}
 				},
 				error : function(e) {
 				}
 			});
-
 		}
 	});
 </script>
-</html>
+</html> 

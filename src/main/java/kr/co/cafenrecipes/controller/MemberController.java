@@ -33,7 +33,7 @@ public class MemberController {
 		return "index";
 	}
 
-	/* 인덱스 페이지 이동 */
+	/* 메인 페이지 이동 */
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public String main() {
 		return "index";
@@ -153,7 +153,7 @@ public class MemberController {
 
 		return "myProfile";
 	}
-
+	
 	/* 회원정보 업데이트 */
 	@RequestMapping(value = "/profileupdate", method = RequestMethod.GET)
 	@ResponseBody

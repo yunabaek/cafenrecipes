@@ -50,12 +50,12 @@ public class MemberService {
 	}
 
 	public HashMap<String, Object> profileUpdate(HashMap<String, String> userupdate) {
-		logger.info("파라메터 서비스 도착여부 {}", userupdate);
-		int row = memberdao.profileUpdate(userupdate);
+		logger.info("파라메터가 서비스에 도착함? {}",userupdate);
+		int row = memberdao.profileUpdate(userupdate);	
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		map.put("success", row);
-		logger.info("성공여부 확인: {}", row);
-
+		logger.info("성공했니? {}",row);
+		
 		return map;
 	}
 
